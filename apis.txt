@@ -1,0 +1,31 @@
+login
+    post
+        localhost:3000/api/auth/login
+
+________________________________________________________
+rejester
+    post
+        localhost:3000/api/auth/register
+
+________________________________________________________
+send verfication code 
+    post
+        localhost:3000/api/send-code
+    *in body*
+        {
+            "email": "magdynadamagdy32@gmail.com"
+        }
+________________________________________________________
+verify the code
+    post
+        localhost:3000/api/verify-code
+    *in body*
+        {
+            "email": "magdynadamagdy32@gmail.com",
+            "code": "123456"
+        }
+
+________________________________________________________
+set new password
+
+________________________________________________________
