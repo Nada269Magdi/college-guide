@@ -11,6 +11,12 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
+      console.log('DB ENV CHECK:', {
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        database: process.env.DB_NAME,
+        port: process.env.DB_PORT
+      });
     console.log('Database connection failed:', err);
   } else {
     console.log('Database connected successfully');
