@@ -2,7 +2,7 @@ const db = require('../config/db');
 
 exports.register = (req, res) => {
     const { id, name, email, password } = req.body;
-    const checkQuery = `SELECT * FROM person WHERE id = ? OR email = ?`;
+    const checkQuery = `SELECT * FROM users WHERE id = ? OR email = ?`;
     db.query(checkQuery, [id, email], (err, result) => {
         if (err){ 
             return res.status(500).json({ 
