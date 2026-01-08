@@ -1,7 +1,2 @@
-node_modules
+node_modules/
 .env
-.DS_Store
-npm-debug.log
-apis.txt
-test.txt
-project_tree.txt
